@@ -1,16 +1,12 @@
-//let newYorkCoords = [40.73, -74.0059];
-//let mapZoomLevel = 12;
-
-// Create the createMap function.
 function createMap(bikeStations) {
-  
 
   // Create the tile layer that will be the background of our map.
   let streetmap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   });
 
-  // Create a baseMaps object to hold the lightmap layer.
+
+  // Create a baseMaps object to hold the streetmap layer.
   let baseMaps = {
     "Street Map": streetmap
   };
@@ -32,7 +28,6 @@ function createMap(bikeStations) {
     collapsed: false
   }).addTo(map);
 }
-// Create the createMarkers function.
 
 function createMarkers(response) {
 
